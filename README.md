@@ -30,6 +30,7 @@ We also need to set an IP address and subnet mask.
 ```
 DEVICE=enp3s0 # or eth0, etc.
 IP_ADDRESS=192.168.99.1 # just avoid collision with other interfaces
+NETMASK=24
 
 nmcli dev mod $DEVICE ipv4.address $IP_ADDRESS/$NETMASK
 ```
