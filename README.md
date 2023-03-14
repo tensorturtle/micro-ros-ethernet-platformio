@@ -1,4 +1,7 @@
-# micro-ros-ethernet-platformio
+# microROS from Teensy 4.1 through Ethernet
+
+![](architecture.svg)
+
 An example configuration of micro_ros_platformio over UDP Ethernet
 
 Using Teensy 4.1 and Ubuntu 20.04 host.
