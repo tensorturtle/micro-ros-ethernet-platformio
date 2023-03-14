@@ -59,7 +59,7 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM) # UDP
 sock.sendto(MESSAGE, (TEENSY_IP, TEENSY_PORT))
 ```
 
-## Host Setup
+## Main Setup
 
 Following https://github.com/micro-ROS/micro_ros_platformio:
 
@@ -93,4 +93,23 @@ pio run # Build the firmware
 pio run --target upload # Flash the firmware
 ```
 
+## Run microROS Agent on Host
+
+On the host,
+```
+docker run -it --rm -v /dev:/dev -v /dev/shm:/dev/shm --privileged --net=host microros/micro-ros-agent:humble udp4 --port 8888 -v6
+```
+
+## View ROS2 messages being published
+```
+docker run -it --rm --network host osrf/ros:humble-desktop-full
+```
+and run:
+```
+ros2 topic list
+``` 
+to find `/micro_ros_platformio_node_publisher`. See the example message:
+```
+ros2 topic echo /micro_ros_platformio_node_publisher
+```
 
