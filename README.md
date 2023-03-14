@@ -61,4 +61,27 @@ sock.sendto(MESSAGE, (TEENSY_IP, TEENSY_PORT))
 
 ## Host Setup
 
-## Teensy 4.1 Setup
+Following https://github.com/micro-ROS/micro_ros_platformio:
+
+**Install VS Code**: https://code.visualstudio.com/download
+
+**Install PlatformIO plugin for VSCode**: https://platformio.org/install/ide?install=vscode
+
+**Install apt dependencies**:
+```
+apt install -y git cmake python3-pip
+```
+
+## Build and Flash
+
+**Connect the Teensy 4.1 to the host via USB**
+
+**Build and flash the project**
+
+```
+pio lib install # Install dependencies
+pio run # Build the firmware
+pio run --target upload # Flash the firmware
+```
+
+
