@@ -33,6 +33,7 @@ IP_ADDRESS=192.168.99.1 # just avoid collision with other interfaces
 NETMASK=24
 
 nmcli con mod $CONN ipv4.address $IP_ADDRESS/$NETMASK ipv4.method manual ipv6.method ignore connection.autoconnect yes
+nmcli con up $CONN
 ```
 
 
