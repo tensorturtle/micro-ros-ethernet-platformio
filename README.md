@@ -8,9 +8,17 @@ This is heavily based on: https://github.com/micro-ROS/micro_ros_platformio
 ## Network Setup
 
 **Link together a Ubuntu 20.04 host machine and Teensy 4.1**
+
 Usually, directly connecting an Ethernet wire between the two works. If not, use a hub.
 
 **Set manual IP**
+
+In this example, we use the following addresses:
+
+IP | Device
+--- | ---
+Host | 192.168.99.1
+Teensy 4.1 | 192.168.99.2
 
 Get list of network devices:
 ```
