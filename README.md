@@ -5,11 +5,35 @@ Using Teensy 4.1 and Ubuntu 20.04 host.
 
 This is heavily based on: https://github.com/micro-ROS/micro_ros_platformio
 
+## Network Setup
+
+**Link together a Ubuntu 20.04 host machine and Teensy 4.1**
+Usually, directly connecting an Ethernet wire between the two works. If not, use a hub.
+
+**Set manual IP**
+
+Get list of network devices:
+```
+nmcli con show
+```
+
+Note the `DEVICE` for the connection that is shared with the Teensy.
+We also need to set an IP address and subnet mask.
+```
+DEVICE=enp3s0 # or eth0, etc.
+IP_ADDRESS=192.168.99.1 # example
+NETMASK=24
+
+nmcli dev mod $DEVICE ipv4.address $IP_ADDRESS/$NETMASK
+```
+
+
 ## Check Teensy 4.1's Ethernet Connection
 
 Flash [`UDPSendReceiveString.ino`](https://github.com/vjmuzik/NativeEthernet/blob/master/examples/UDPSendReceiveString/UDPSendReceiveString.ino)
 Monitor the Teensy's serial port
 
+Simple Python script to send UDP messages to Teensy
 ```python3
 # send UDP Packet
 import socket
@@ -17,7 +41,7 @@ import time
 
 UDP_IP = "192.168.99.2"
 UDP_PORT = 8888
-MESSAGE = b"Hello, World!"
+MESSAGE = b"Message from host to Teensy!"
 
 print("UDP target IP:", UDP_IP)
 print("UDP target port:", UDP_PORT)
