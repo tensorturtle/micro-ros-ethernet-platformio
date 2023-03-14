@@ -38,16 +38,16 @@ Simple Python script to send UDP messages to Teensy
 import socket
 import time
 
-UDP_IP = "192.168.99.2"
-UDP_PORT = 8888
+TEENSY_IP = "192.168.99.2"
+TEENSY_PORT = 8888
 MESSAGE = b"Message from host to Teensy!"
 
-print("UDP target IP:", UDP_IP)
-print("UDP target port:", UDP_PORT)
+print("UDP target IP:", TEENSY_IP)
+print("UDP target port:", TEENSY_PORT)
 print("message:", MESSAGE)
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM) # UDP
-sock.sendto(MESSAGE, (UDP_IP, UDP_PORT))
+sock.sendto(MESSAGE, (TEENSY_IP, TEENSY_PORT))
 ```
 
 ## Host Setup
