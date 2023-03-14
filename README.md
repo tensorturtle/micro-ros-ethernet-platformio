@@ -72,7 +72,16 @@ Following https://github.com/micro-ROS/micro_ros_platformio:
 apt install -y git cmake python3-pip
 ```
 
-## Build and Flash
+**Clone this repository**
+```
+git clone git@github.com:tensorturtle/micro-ros-ethernet-platformio.git
+```
+
+**Open, Build, and Flash the Teensy Program**
+
+From the PlatformIO Home within VS Code, open `MicroRosEthernetDemo`.
+
+**Open a terminal in the same directory**
 
 **Connect the Teensy 4.1 to the host via USB**
 
