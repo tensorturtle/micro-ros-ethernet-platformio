@@ -79,7 +79,7 @@ git clone git@github.com:tensorturtle/micro-ros-ethernet-platformio.git
 
 **Open, Build, and Flash the Teensy Program**
 
-From the PlatformIO Home within VS Code, open `MicroRosEthernetDemo`.
+**From the PlatformIO Home within VS Code, open `MicroRosEthernetDemo` directory, which is a PlatformIO Project.**
 
 **Open a terminal in the same directory**
 
