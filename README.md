@@ -25,14 +25,14 @@ Get list of network devices:
 nmcli con show
 ```
 
-Note the `DEVICE` for the connection that is shared with the Teensy.
+Note the `CONN` for the connection that is shared with the Teensy.
 We also need to set an IP address and subnet mask.
 ```
-DEVICE=enp3s0 # or eth0, etc.
+DEVICE='Wired'
 IP_ADDRESS=192.168.99.1 # just avoid collision with other interfaces
 NETMASK=24
 
-nmcli dev mod $DEVICE ipv4.address $IP_ADDRESS/$NETMASK
+nmcli con mod '$DEVICE' ipv4.address $IP_ADDRESS/$NETMASK ipv4.method manual ipv6.method ignore connection.autoconnect yes
 ```
 
 
