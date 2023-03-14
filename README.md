@@ -99,12 +99,16 @@ pio run --target upload # Flash the firmware
 
 On the host,
 ```
-docker run -it --rm -v /dev:/dev -v /dev/shm:/dev/shm --privileged --net=host microros/micro-ros-agent:humble udp4 --port 8888 -v6
+docker run -it --rm -v /dev:/dev -v /dev/shm:/dev/shm --privileged --net=host microros/micro-ros-agent:humble udp4 --port 8888 -v6\
 ```
 
 ## View ROS2 messages being published
 ```
 docker run -it --rm --network host osrf/ros:humble-desktop-full
+```
+If host is a NVIDIA Jetson, find appropriate docker image from https://github.com/dusty-nv/jetson-containers
+```
+docker run -it --rm --network host dustynv/ros:humble-ros-base-l4t-r35.2.1
 ```
 and run:
 ```
