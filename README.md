@@ -37,7 +37,7 @@ nmcli con up $CONN
 ```
 
 
-## Check Teensy 4.1's Ethernet Connection
+## (Optional) Check Teensy 4.1's Ethernet Connection
 
 Flash [`UDPSendReceiveString.ino`](https://github.com/vjmuzik/NativeEthernet/blob/master/examples/UDPSendReceiveString/UDPSendReceiveString.ino)
 
