@@ -38,6 +38,7 @@ nmcli dev mod $DEVICE ipv4.address $IP_ADDRESS/$NETMASK
 ## Check Teensy 4.1's Ethernet Connection
 
 Flash [`UDPSendReceiveString.ino`](https://github.com/vjmuzik/NativeEthernet/blob/master/examples/UDPSendReceiveString/UDPSendReceiveString.ino)
+
 Monitor the Teensy's serial port
 
 Simple Python script to send UDP messages to Teensy
