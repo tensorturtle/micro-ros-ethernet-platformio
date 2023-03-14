@@ -118,4 +118,6 @@ to find `/micro_ros_platformio_node_publisher`. See the example message:
 ```
 ros2 topic echo /micro_ros_platformio_node_publisher
 ```
+Connect a digital switch to see changes to the topic, and wire it to Pin 23:
 
+![](https://docs.arduino.cc/static/fb8449b4834dfbbf3c03223c8bc3e5b5/29114/schematic.png)
