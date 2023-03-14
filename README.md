@@ -28,11 +28,11 @@ nmcli con show
 Note the `CONN` for the connection that is shared with the Teensy.
 We also need to set an IP address and subnet mask.
 ```
-DEVICE='Wired'
+CONN=eth0
 IP_ADDRESS=192.168.99.1 # just avoid collision with other interfaces
 NETMASK=24
 
-nmcli con mod '$DEVICE' ipv4.address $IP_ADDRESS/$NETMASK ipv4.method manual ipv6.method ignore connection.autoconnect yes
+nmcli con mod $CONN ipv4.address $IP_ADDRESS/$NETMASK ipv4.method manual ipv6.method ignore connection.autoconnect yes
 ```
 
 
